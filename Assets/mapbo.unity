@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initializeOnStart: 1
-  _latitudeLongitudeString: 40.7648, -73.9808
+  _latitudeLongitudeString: 42.3605, -71.0596
   _zoom: 16
   _root: {fileID: 1595414760}
   _tileProvider: {fileID: 1595414758}
