@@ -10,7 +10,7 @@ public class RasterMap : MonoBehaviour, Mapbox.Utils.IObserver<RasterTile>
 		var map = new Map<RasterTile>(MapboxAccess.Instance);
 		map.Zoom = 2;
 		map.Vector2dBounds = Vector2dBounds.World();
-		map.MapId = "mapbox://styles/mapbox/light-v9";
+		map.MapId = "mapbox://styles/mapbox/dark-v9";
 		map.Subscribe(this);
 		map.Update();
 	}
