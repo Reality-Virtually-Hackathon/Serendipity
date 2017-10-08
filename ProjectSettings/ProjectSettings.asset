@@ -832,7 +832,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: ad4ece55-06fa-4fd2-97cf-80318f16de7a
-  projectName: Serendipity
+  projectName: 
   organizationId: muso-fan
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
