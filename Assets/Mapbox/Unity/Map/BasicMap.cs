@@ -11,7 +11,6 @@
 			_worldHeightFixed = false;
 			_centerLatitudeLongitude = latLon;
 			_zoom = zoom;
-
 			var referenceTileRect = Conversions.TileBounds(TileCover.CoordinateToTileId(_centerLatitudeLongitude, _zoom));
 			_centerMercator = referenceTileRect.Center;
 
