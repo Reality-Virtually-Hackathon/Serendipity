@@ -2,6 +2,7 @@
 {
 	using Mapbox.Unity.Location;
 	using UnityEngine;
+	using UnityEngine.UI;
 
 	public class InitializeMapWithLocationProvider : MonoBehaviour
 	{
@@ -9,13 +10,15 @@
 		AbstractMap _map;
 
 //		AbstractMap mappy;
+		public Text text;
 
 		ILocationProvider _locationProvider;
 
 		void Start()
 		{
-			_locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
-			_locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
+			//_locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
+			//_locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
+			Input.location.Stop ();
 			Input.location.Start();
 
 			Debug.Log (Input.location.isEnabledByUser);
@@ -36,7 +39,10 @@
 		}
 
 		void Update (){
+			Mapbox.Utils.Vector2d v = _map.CenterLatitudeLongitude;
+			v = new Mapbox.Utils.Vector2d (Input.location.lastData.altitude, Input.location.lastData.longitude);
 
+			text.text = "lattitude " + v.y + " longitude " + v.x;
 //			if (Input.GetKeyDown (KeyCode.A)) {
 //				_locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
 //				_locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
